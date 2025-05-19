@@ -2,6 +2,7 @@ import json
 
 
 def filter_users_by_name(name):
+    """Filter users data base on name and print them"""
     with open("users.json", "r") as file:
         users = json.load(file)
 
@@ -11,6 +12,7 @@ def filter_users_by_name(name):
         print(user)
 
 def filter_users_by_age(age):
+    """Filter users data base on age and print them"""
     with open("users.json", "r") as file:
         users = json.load(file)
 
@@ -21,6 +23,7 @@ def filter_users_by_age(age):
 
 
 def filter_users_by_email(email):
+    """Filter users data base on email address and print them"""
     with open("users.json", "r") as file:
         users = json.load(file)
 
@@ -43,5 +46,6 @@ if __name__ == "__main__":
     elif filter_option == "email":
         email_to_search = input("Enter a age to filter users: ").strip()
         filter_users_by_name(email_to_search)
+
     else:
         print("Filtering by that option is not yet supported.")
